@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.10.35201.131
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DRPladesamlingREST2", "DRPladesamlingREST2\DRPladesamlingREST2.csproj", "{341B23E8-9DE8-4FCF-915C-C9CE4B775C7B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{341B23E8-9DE8-4FCF-915C-C9CE4B775C7B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{341B23E8-9DE8-4FCF-915C-C9CE4B775C7B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{341B23E8-9DE8-4FCF-915C-C9CE4B775C7B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{341B23E8-9DE8-4FCF-915C-C9CE4B775C7B}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {6885FB0D-C049-4578-8672-CEAC6917AF35}
+	EndGlobalSection
+EndGlobal

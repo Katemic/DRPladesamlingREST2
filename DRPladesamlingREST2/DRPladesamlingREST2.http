@@ -1,0 +1,6 @@
+@DRPladesamlingREST2_HostAddress = http://localhost:5064
+
+GET {{DRPladesamlingREST2_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
