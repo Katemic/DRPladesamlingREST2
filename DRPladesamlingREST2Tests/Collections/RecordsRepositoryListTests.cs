@@ -22,10 +22,10 @@ namespace DRPladesamlingREST2.Collections.Tests
         [TestMethod()]
         public void GetAllTest()
         {
-            Assert.AreEqual(0, _recordsRepo.GetAll().Count);
+            Assert.AreEqual(5, _recordsRepo.GetAll().Count);
             Record record = new Record("Title", "Artist", 55, 2001);
             _recordsRepo.Add(record);
-            Assert.AreEqual(1, _recordsRepo.GetAll().Count);
+            Assert.AreEqual(6, _recordsRepo.GetAll().Count);
         }
     }
 }

@@ -10,6 +10,7 @@
         public RecordsRepositoryList()
         {
             _records = new List<Record>();
+            MockData();
         }
 
 
