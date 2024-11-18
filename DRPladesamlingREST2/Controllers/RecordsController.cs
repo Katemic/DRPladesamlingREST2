@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using DRPladesamlingREST2.Collections;
+using Microsoft.AspNetCore.Mvc;
 
 // For more information on enabling Web API for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 
@@ -8,11 +9,28 @@ namespace DRPladesamlingREST2.Controllers
     [ApiController]
     public class RecordsController : ControllerBase
     {
+        
+        private RecordsRepositoryList _recordsRepo;
+
+        public RecordsController(RecordsRepositoryList recordsRepository)
+        {
+             _recordsRepo = recordsRepository;
+        }
+
+
         // GET: api/<RecordsController>
         [HttpGet]
-        public IEnumerable<string> Get()
+        [ProducesResponseType(StatusCodes.Status200OK)]
+        [ProducesResponseType(StatusCodes.Status204NoContent)]
+        public ActionResult<List<Record>> Get()
         {
-            return new string[] { "value1", "value2" };
+            List<Record> records = _recordsRepo.GetAll();
+            if (records.Count == 0)
+            {
+                return NoContent();
+            }
+            return Ok(records);
+
         }
 
         // GET api/<RecordsController>/5
