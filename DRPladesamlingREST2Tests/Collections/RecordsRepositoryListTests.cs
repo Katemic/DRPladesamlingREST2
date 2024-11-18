@@ -11,8 +11,10 @@ namespace DRPladesamlingREST2.Collections.Tests
     [TestClass()]
     public class RecordsRepositoryListTests
     {
+      
+
         [TestMethod()]
-        public void RecordsRepositoryListTest()
+        public void GetAllTest()
         {
             Assert.Fail();
         }

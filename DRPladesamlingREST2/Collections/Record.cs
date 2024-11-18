@@ -36,7 +36,7 @@ namespace DRPladesamlingREST2.Collections
             {
                 throw new ArgumentNullException("Artist name cannot be null");
             }
-            if (Artist.Length < 2)
+            if (Artist.Length <= 2)
             {
                 throw new ArgumentOutOfRangeException("Artist name must be at least 2 characters long");
             }
