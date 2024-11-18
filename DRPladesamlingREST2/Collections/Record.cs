@@ -8,6 +8,7 @@ namespace DRPladesamlingREST2.Collections
         //title, artist, duration, publicationYear (dates not allowed: dates = problems when you program)
         //and maybe more attributes …Duration is the of number seconds(a simple int)
 
+        public int Id { get; set; }
         public string Title { get; set; }
         public string Artist { get; set; }
         public int Duration { get; set; }
