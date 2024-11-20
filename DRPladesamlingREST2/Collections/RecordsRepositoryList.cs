@@ -20,7 +20,7 @@
             Record record2 = new Record("The Wall", "Pink Floyd", 3200, 1979);
             Record record3 = new Record("Abbey Road", "The Beatles", 2900, 1969);
             Record record4 = new Record("Sgt. Pepper's Lonely Hearts Club Band", "The Beatles", 2400, 1967);
-            Record record5 = new Record("The White Album", "The Beatles", 3000, 1968);
+            Record record5 = new Record("The White Album", "The Beatles", 3000, 1979);
 
             Add(record1);
             Add(record2);
@@ -35,11 +35,11 @@
             List<Record> recordList =  new List<Record>(_records);
             if (title != null)
             {
-                recordList = recordList.FindAll(r => r.Title.ToLower().Contains(title));
+                recordList = recordList.FindAll(r => r.Title.ToLower().Contains(title.ToLower()));
             }
             if (artist != null)
             {
-                recordList = recordList.FindAll(r => r.Artist.ToLower().Contains(artist));
+                recordList = recordList.FindAll(r => r.Artist.ToLower().Contains(artist.ToLower()));
             }
             if (publicationYear != null)
             {

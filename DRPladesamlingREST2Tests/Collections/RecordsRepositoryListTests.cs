@@ -32,6 +32,7 @@ namespace DRPladesamlingREST2.Collections.Tests
         {
             Assert.AreEqual(2, _recordsRepo.GetAll(artist: "Pink").Count);
             Assert.AreEqual(4, _recordsRepo.GetAll(title: "t").Count);
+            Assert.AreEqual(2, _recordsRepo.GetAll("the", "l", 1979).Count);
         }
     }
 }
