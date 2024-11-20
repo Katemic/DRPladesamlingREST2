@@ -30,9 +30,23 @@
         }
 
 
-        public List<Record> GetAll()
+        public List<Record> GetAll(string? title = null, string? artist = null, int? publicationYear = null)
         {
-            return new List<Record>(_records);
+            List<Record> recordList =  new List<Record>(_records);
+            if (title != null)
+            {
+                recordList = recordList.FindAll(r => r.Title.Contains(title));
+            }
+            if (artist != null)
+            {
+                recordList = recordList.FindAll(r => r.Artist.Contains(artist));
+            }
+            if (publicationYear != null)
+            {
+                recordList = recordList.FindAll(r => r.PublicationYear == publicationYear);
+            }
+
+            return recordList;
         }
 
         public Record Add(Record record)
