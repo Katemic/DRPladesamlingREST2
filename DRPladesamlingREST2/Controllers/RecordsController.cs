@@ -22,9 +22,9 @@ namespace DRPladesamlingREST2.Controllers
         [HttpGet]
         [ProducesResponseType(StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status204NoContent)]
-        public ActionResult<List<Record>> Get()
+        public ActionResult<List<Record>> Get([FromQuery] string? title, [FromQuery] string? artist, [FromQuery] int? publicationYear)
         {
-            List<Record> records = _recordsRepo.GetAll();
+            List<Record> records = _recordsRepo.GetAll(title, artist, publicationYear);
             if (records.Count == 0)
             {
                 return NoContent();
