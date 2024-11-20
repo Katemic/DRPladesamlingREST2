@@ -27,5 +27,11 @@ namespace DRPladesamlingREST2.Collections.Tests
             _recordsRepo.Add(record);
             Assert.AreEqual(6, _recordsRepo.GetAll().Count);
         }
+        [TestMethod()]
+        public void GetAllFilterTest()
+        {
+            Assert.AreEqual(2, _recordsRepo.GetAll(artist: "Pink").Count);
+            Assert.AreEqual(4, _recordsRepo.GetAll(title: "t").Count);
+        }
     }
 }

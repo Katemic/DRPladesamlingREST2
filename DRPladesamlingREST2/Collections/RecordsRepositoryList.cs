@@ -35,11 +35,11 @@
             List<Record> recordList =  new List<Record>(_records);
             if (title != null)
             {
-                recordList = recordList.FindAll(r => r.Title.Contains(title));
+                recordList = recordList.FindAll(r => r.Title.ToLower().Contains(title));
             }
             if (artist != null)
             {
-                recordList = recordList.FindAll(r => r.Artist.Contains(artist));
+                recordList = recordList.FindAll(r => r.Artist.ToLower().Contains(artist));
             }
             if (publicationYear != null)
             {
